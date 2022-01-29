@@ -2,4 +2,172 @@
 
 body {
   font-family: $f-family;
+  font-size: $f-size;
+}
+
+// MAIN SECTION
+.section {
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: $clr-main-bg;
+}
+
+// CARD CONTAINER
+.card__container {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  background: $clr-card-bg;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+// CARD THUMBNAIL IMAGE
+.card__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  // IMAGE ON HOVER OVERLAY
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background-image: url("../images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsla(178, 100%, 50%, 0.589);
+  }
+  &:hover {
+    &::after {
+      display: unset;
+    }
+  }
+}
+
+// CARD CONTENT TITLE AND TEXT
+.card__content--text {
+  text-align: left;
+  margin: 1.125rem 0;
+  & h4 {
+    font-size: 1.25rem;
+    font-weight: $fw-bold;
+    color: $clr-white;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $clr-primary-light;
+    }
+  }
+  & p {
+    color: $clr-primary-soft;
+    font-weight: $fw-light;
+    font-size: 1.125rem;
+    line-height: 1.55rem;
+  }
+}
+
+// CARD CONTENT DATA VALUE
+.card__content--values {
+  display: flex;
+  justify-content: space-between;
+}
+.card__content--eth,
+.card__content--days {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 0.9rem;
+  & img {
+    margin-right: 0.5rem;
+  }
+}
+.card__content--eth {
+  color: $clr-primary-light;
+}
+.card__content--days {
+  justify-content: flex-end;
+  color: $clr-primary-soft;
+}
+
+// CARD AUTHOR
+.card__content--author {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  & img {
+    width: 35px;
+    border: 1px solid $clr-white;
+    border-radius: 50%;
+    margin-right: 0.85rem;
+  }
+  & p {
+    color: $clr-primary-soft;
+  }
+  & span {
+    color: $clr-white;
+    cursor: pointer;
+    &:hover {
+      color: $clr-primary-light;
+    }
+  }
+  // LINE BREAK
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    background: $clr-line;
+  }
+}
+
+// FRONTEND MENTOR ATTRIBUTION
+.attribution {
+  color: $clr-primary-soft;
+
+  & a {
+    text-decoration: none;
+    color: $clr-primary-light;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: $breakpoint-mobile) {
+  .section {
+    padding: 1.5rem;
+  }
+  .card__content--text p {
+    font-size: 1rem;
+  }
+  .attribution {
+    font-size: 0.75rem;
+  }
 }

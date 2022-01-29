@@ -8,6 +8,165 @@
 
 body {
   font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #0d192b;
+}
+
+.card__container {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  background: #14253d;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.card__image::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background-image: url("../images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 255, 247, 0.589);
+}
+.card__image:hover::after {
+  display: unset;
+}
+
+.card__content--text {
+  text-align: left;
+  margin: 1.125rem 0;
+}
+.card__content--text h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.card__content--text h4:hover {
+  color: #00fff7;
+}
+.card__content--text p {
+  color: #8bacda;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.55rem;
+}
+
+.card__content--values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__content--eth,
+.card__content--days {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 0.9rem;
+}
+.card__content--eth img,
+.card__content--days img {
+  margin-right: 0.5rem;
+}
+
+.card__content--eth {
+  color: #00fff7;
+}
+
+.card__content--days {
+  justify-content: flex-end;
+  color: #8bacda;
+}
+
+.card__content--author {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.card__content--author img {
+  width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 0.85rem;
+}
+.card__content--author p {
+  color: #8bacda;
+}
+.card__content--author span {
+  color: white;
+  cursor: pointer;
+}
+.card__content--author span:hover {
+  color: #00fff7;
+}
+.card__content--author::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  background: #2f415b;
+}
+
+.attribution {
+  color: #8bacda;
+}
+.attribution a {
+  text-decoration: none;
+  color: #00fff7;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: 1.5rem;
+  }
+
+  .card__content--text p {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    font-size: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
