@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: <a href="https://github.com/marazza-dev/fm-nft-card-solution" target="_blank">https://github.com/marazza-dev/fm-nft-card-solution</a>
+- Live Site URL: <a href="https://marazza-dev.github.io/fm-nft-card-solution/" target="_blank">https://marazza-dev.github.io/fm-nft-card-solution/</a>
 
 ## My process
 
