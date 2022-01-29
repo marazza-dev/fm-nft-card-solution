@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   font-size: 18px;
@@ -65,7 +69,8 @@ body {
   text-align: left;
   margin: 1.125rem 0;
 }
-.card__content--text h4 {
+.card__content--text h1,
+.card__content--text a {
   font-size: 1.25rem;
   font-weight: 600;
   color: white;
@@ -73,7 +78,8 @@ body {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.card__content--text h4:hover {
+.card__content--text h1:hover,
+.card__content--text a:hover {
   color: #00fff7;
 }
 .card__content--text p {
@@ -127,11 +133,11 @@ body {
 .card__content--author p {
   color: #8bacda;
 }
-.card__content--author span {
+.card__content--author a {
   color: white;
   cursor: pointer;
 }
-.card__content--author span:hover {
+.card__content--author a:hover {
   color: #00fff7;
 }
 .card__content--author::before {
